@@ -19,7 +19,7 @@ public class InAppPurchaseResultHandler : MonoBehaviour
 #endif
     }
 
-    private void Instance_OnPurchaseCompleted(string productId, UnityEngine.Purchasing.Product product)
+    private void Instance_OnPurchaseCompleted(string productId)
     {
 #if UNITY_PURCHASING && !UNITY_STANDALONE
         ///

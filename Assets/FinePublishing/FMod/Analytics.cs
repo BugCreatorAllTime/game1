@@ -224,7 +224,7 @@ namespace FMod
             LogFacebookSE_Rating(ratedValue, maxRating);
         }
 
-        public static void LogSE_Purchase(float priceAmount, string priceCurrency, string itemId, UnityEngine.Purchasing.Product product, double retentionDays)
+        public static void LogSE_Purchase(float priceAmount, string priceCurrency, string itemId,  double retentionDays)
         {
 #if USE_FACEBOOK_IAP
             LogFacebookSE_Purchase(priceAmount, priceCurrency, itemId, product, retentionDays);
@@ -240,12 +240,12 @@ namespace FMod
 
         #region Facebook's standard events
 
-        static void LogFacebookSE_Purchase(float priceAmount, string priceCurrency, string itemId, UnityEngine.Purchasing.Product product, double retentionDays)
+        static void LogFacebookSE_Purchase(float priceAmount, string priceCurrency, string itemId,  double retentionDays)
         {
             ///
             var iapParameters = new Dictionary<string, object>();
             iapParameters["itemId"] = itemId;
-            iapParameters["transactionId"] = product.transactionID;
+            //iapParameters["transactionId"] = product.transactionID;
             iapParameters["unityTime"] = Time.time;
             iapParameters["retentionDays"] = retentionDays;
 #if UNITY_IOS
@@ -340,10 +340,10 @@ namespace FMod
         #endregion
 
         #region Tenjin's standard events
-        static void LogTenjinSE_Purchase(float priceAmount, string priceCurrency, string itemId, UnityEngine.Purchasing.Product product)
+        static void LogTenjinSE_Purchase(float priceAmount, string priceCurrency, string itemId)
         {
 #if USE_TENJIN
-            InitTenjin.LogPurchase(product);
+            //InitTenjin.LogPurchase(product);
 #endif
         }
 

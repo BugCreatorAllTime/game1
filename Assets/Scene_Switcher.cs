@@ -10,7 +10,7 @@ public class Scene_Switcher : MonoBehaviour
   public void playGame()
     {
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Main");
     }
     public void BackScene1(){
       SceneManager.LoadScene("Scene1");

@@ -3,7 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Purchasing;
+//using UnityEngine.Purchasing;
 
 public class InitTenjin : MonoBehaviour
 {
@@ -55,7 +55,7 @@ public class InitTenjin : MonoBehaviour
 #endif
     }
 
-    public static void LogPurchase(Product purchasedProduct)
+    /*public static void LogPurchase(Product purchasedProduct)
     {
         ///
         if (string.IsNullOrWhiteSpace(ApiKey))
@@ -96,7 +96,7 @@ public class InitTenjin : MonoBehaviour
 
 #endif
 
-    }
+    }*/
 
     public static void LogCompletedTutorial()
     {
